@@ -1,0 +1,15 @@
+{
+  "v": 1,
+  "t": "p2pws-key-backup",
+  "kdf": {
+    "name": "PBKDF2-SHA256",
+    "iterations": 1000,
+    "salt": "gBNtiRebycnS5smMkk9ziA"
+  },
+  "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+  "account": null,
+  "label": "",
+  "createdAt": 1760000000000,
+  "iv": "03fQSB635bgcFkOM",
+  "ct": "BzzojVdzdmzMMPoyfczoTp4KZmCc_1ovWpVQr4hPuJkutIfnR3EB1OZ76Hhen6qlxkpV38nwKh_ON1VUqIM7TA"
+}

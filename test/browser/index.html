@@ -1,0 +1,59 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>keyvault browser tests</title>
+<script type="importmap">{ "imports": { "hash-wasm": "/node_modules/hash-wasm/dist/index.esm.js" } }</script>
+<body>
+<pre id="out">running...</pre>
+<script type="module">
+  import { makeCases } from '/test/cases.mjs';
+  import * as kv from '/src/index.mjs';
+  import { enableArgon2id, argon2idKdf } from '/src/argon2.mjs';
+
+  const env = { fixture: async (name) => { const r = await fetch('/test/fixtures/' + name); if (!r.ok) throw new Error('fixture ' + name + ' ' + r.status); return r.text(); } };
+  const results = [];
+  window.__ENV = { secure: isSecureContext, ua: navigator.userAgent, subtle: !!crypto.subtle };
+
+  // Everything in test/cases.mjs, in the browser's own WebCrypto.
+  window.runCases = async () => {
+    for (const c of makeCases(env)) {
+      const t0 = performance.now();
+      try { await c.run(); results.push({ name: c.name, ok: true, ms: Math.round(performance.now() - t0) }); }
+      catch (e) { results.push({ name: c.name, ok: false, error: String(e && e.stack || e) }); }
+    }
+    return results;
+  };
+
+  // Argon2id through hash-wasm in the browser.
+  window.argon2Case = async () => {
+    await enableArgon2id();
+    const kdf = argon2idKdf({ iterations: 1, memoryKiB: 256 });
+    const text = await kv.seal('hello', 'correct horse', { type: 't', kdf });
+    const r = await kv.openText(text, 'correct horse', { type: 't' });
+    let wrong;
+    try { await kv.open(text, 'wrong horse', { type: 't' }); } catch (e) { wrong = e.code; }
+    return { payload: r.payload, wrong, kdf: r.kdf };
+  };
+
+  // Real WebAuthn PRF against Chromium's virtual authenticator (set up by run.mjs over CDP).
+  window.passkeyCase = async () => {
+    const created = await navigator.credentials.create({ publicKey: {
+      rp: { name: 'keyvault test', id: location.hostname },
+      user: { id: new Uint8Array([1, 2, 3, 4]), name: 'test', displayName: 'test' },
+      challenge: crypto.getRandomValues(new Uint8Array(32)),
+      pubKeyCredParams: [{ type: 'public-key', alg: -7 }],
+      authenticatorSelection: { residentKey: 'required', userVerification: 'required' },
+      extensions: { prf: {} },
+    } });
+    const prfEnabled = created.getClientExtensionResults().prf?.enabled === true;
+    const credentialId = new Uint8Array(created.rawId);
+    const opts = { credentialId, rpId: location.hostname, userVerification: 'required' };
+    const a1 = await kv.prfFromPasskey({ ...opts, salt: new TextEncoder().encode('salt-a') });
+    const a2 = await kv.prfFromPasskey({ ...opts, salt: new TextEncoder().encode('salt-a') });
+    const b = await kv.prfFromPasskey({ ...opts, salt: new TextEncoder().encode('salt-b') });
+    const text = await kv.seal('passkey sealed', a1, { type: 't', kdf: { name: 'PBKDF2-SHA256', iterations: 1000 } });
+    const opened = await kv.openText(text, a2, { type: 't' });
+    return { prfEnabled, same: a1 === a2, different: a1 !== b, length: a1.length, opened: opened.payload };
+  };
+  window.ready = true;
+  document.getElementById('out').textContent = 'ready';
+</script>

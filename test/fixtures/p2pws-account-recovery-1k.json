@@ -1,0 +1,15 @@
+{
+  "v": 1,
+  "t": "p2pws-account-recovery",
+  "kdf": {
+    "name": "PBKDF2-SHA256",
+    "iterations": 1000,
+    "salt": "cbWLE5JbJa8g3lVpKwpTjQ"
+  },
+  "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+  "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+  "label": "bundle",
+  "createdAt": 1760000000000,
+  "iv": "wdoNxXe0ielJLiFc",
+  "ct": "MryqnxVcmN0rEa7TI8gWddO_FH23qapHtKcErxor37lzBTxkyPxfd3JNkRMRm1z7Wn7lCeMub0ZU4Vjy-6guR31DpLt3sqh3sVA4qPGWW9sonJIthc-WyhVR9QIhjX0RbXnIAchE7bJCZFqgvRSdYiBpxsOuPV972jSlR2-RtCgcNXWXRwWE_7GuKBuI5GJcxJohBE8rFBYo8hNn97HB_GNv7xMWpFMck_aqvIq31E-aWxbR5eY"
+}

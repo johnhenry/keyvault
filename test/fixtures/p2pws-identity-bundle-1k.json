@@ -1,0 +1,15 @@
+{
+  "v": 1,
+  "t": "p2pws-identity-bundle",
+  "kdf": {
+    "name": "PBKDF2-SHA256",
+    "iterations": 1000,
+    "salt": "4jpWMzlbexJRjtQzrZRDjg"
+  },
+  "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+  "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+  "label": "bundle",
+  "createdAt": 1760000000000,
+  "iv": "u5JR5apyJl2WEqjd",
+  "ct": "sQGnJZtxzEqacL53QY5VFO0Yc2O70iWBRbnOKk0EOOpvshxr1UxVGXMlhLpyItxBgS3sb0VxnxnpcXOrmes4tCuUNBm4z8uyyDGHWA2IMYtg_r3JJCAkdSg4OnlDMSwh6vneFu3JMXc2hvGS1LKYC028M9GfRUmOQUXQh6iJvQRKBFCOFN8tilMfBZn_VFFGYxp-y8YV5Uutn6V2deYwsTmA4IlVTyLWFhv3z8bfW95hkffJ7sQ"
+}

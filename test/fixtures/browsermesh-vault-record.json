@@ -1,0 +1,12 @@
+{
+  "podId": "pod-1",
+  "publicKey": "AAAA",
+  "privateKeyJwk": null,
+  "encryptedPrivateKey": {
+    "kdf": "PBKDF2-SHA256",
+    "iterations": 310000,
+    "salt": "Px72PohI3QzLUgRLKq3hdg",
+    "iv": "YpAZTOXpFFQNFfwX",
+    "ciphertext": "f_SKb427mSo0d45GP97ShCPHnW0YTDx0z2xerZ-9jCF_Ja_c1ZamBnWOVNLoNxRHdMFjVLAwLAVL88v1BbcYQ5KBlohw-rS_LKYhKes6b5Jwjco3k-zrJO7Q4Z1IetUYAsWzTxC8EEPxAx6ToVWPHnLOhN9QA0Jw60LxRh6S33ZII2esKfpYTKpXZUytLejGJ9Gyvm3-jxDVMxTyQRffHSQntoLsjTN1sG48zt6zDBhYSfPzthQe-cc4xpMLlo8"
+  }
+}
