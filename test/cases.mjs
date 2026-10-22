@@ -250,7 +250,8 @@ export function makeCases(env) {
       'salt': (o) => { o.kdf.salt = flip(o.kdf.salt); },
       'iv': (o) => { o.iv = flip(o.iv); },
       'ciphertext': (o) => { o.ct = flip(o.ct); },
-      'tag (last byte)': (o) => { o.ct = o.ct.slice(0, -2) + (o.ct.endsWith('A') ? 'B' : 'A') + o.ct.slice(-1); },
+      // flip a bit in the decoded last byte (the end of the GCM tag); editing a base64url character can be a no-op
+      'tag (last byte)': (o) => { const b = b64uDecode(o.ct); b[b.length - 1] ^= 0x01; o.ct = b64uEncode(b); },
     };
     for (const [name, fn] of Object.entries(tampers)) await code(open(edit(text, fn), 'correct horse', { type: 't' }), 'bad_passphrase', name);
     // changing the type is caught by the type check; without one it is caught by authentication

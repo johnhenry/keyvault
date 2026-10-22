@@ -42,7 +42,7 @@
   "homepage": "https://github.com/johnhenry/keyvault#readme",
   "bugs": "https://github.com/johnhenry/keyvault/issues",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "peerDependencies": {
     "hash-wasm": "^4.11.0"

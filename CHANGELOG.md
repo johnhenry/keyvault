@@ -16,5 +16,5 @@ First release. Consolidates the password-based crypto that p2pws (`backup.mjs`, 
 - Caps on hostile input: PBKDF2 iterations 1,000 to 10,000,000, Argon2id memory/passes/lanes, unknown KDF names, oversized records and payloads, empty / undefined / non-string secrets.
 - `prfFromPasskey()`: a secret from a passkey via the WebAuthn PRF extension.
 - Optional `@johnhenry/keyvault/argon2`: Argon2id through `hash-wasm` (optional peer dependency) or your own implementation.
-- Zero runtime dependencies; ESM; browsers, Node >= 20, Deno. TypeScript declarations.
+- Zero runtime dependencies; ESM; browsers, Node >= 22, Deno. TypeScript declarations.
 - Tests in Node, Deno and headless Chromium (Playwright), with fixtures written by the current p2pws and browsermesh-core code.

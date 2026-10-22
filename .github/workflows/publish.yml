@@ -20,7 +20,7 @@ jobs:
       id-token: write # npm provenance
     uses: johnhenry/workflows/.github/workflows/npm-publish.yml@v1
     with:
-      node-version: "20"
+      node-version: "22"
       gate-commands: |
         npm test
         npm run typecheck
