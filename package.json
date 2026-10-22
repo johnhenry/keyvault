@@ -1,0 +1,61 @@
+{
+  "name": "@johnhenry/keyvault",
+  "version": "0.1.0",
+  "description": "Zero-dependency WebCrypto key vault: turn a human secret into keys and seal small secrets with them (browser, Node, Deno)",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.mjs"
+    },
+    "./argon2": {
+      "types": "./types/argon2.d.ts",
+      "default": "./src/argon2.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "types/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "node --test test/node/*.test.mjs",
+    "test:browser": "node test/browser/run.mjs",
+    "test:deno": "deno test --no-check --allow-read test/node/core.test.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "fixtures": "node scripts/gen-fixtures.mjs",
+    "prepublishOnly": "npm test && npm run typecheck"
+  },
+  "keywords": ["webcrypto", "pbkdf2", "argon2id", "aes-gcm", "passphrase", "key-derivation", "vault", "passkey", "webauthn-prf"],
+  "author": "John Henry <john@iamjohnhenry.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnhenry/keyvault.git"
+  },
+  "homepage": "https://github.com/johnhenry/keyvault#readme",
+  "bugs": "https://github.com/johnhenry/keyvault/issues",
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "hash-wasm": "^4.11.0"
+  },
+  "peerDependenciesMeta": {
+    "hash-wasm": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "hash-wasm": "^4.11.0",
+    "playwright": "^1.50.0",
+    "typescript": "^5.6.0"
+  }
+}

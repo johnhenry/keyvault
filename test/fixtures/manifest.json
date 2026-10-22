@@ -1,0 +1,152 @@
+{
+  "generatedBy": {
+    "p2pws": "2c2c667",
+    "browsermesh-core": "0.8.0"
+  },
+  "note": "Written by the code named above. `payload` is the expected plaintext as base64url bytes; `passphrase` opens it.",
+  "backups": [
+    {
+      "file": "p2pws-key-backup-600k.json",
+      "format": "p2pws",
+      "type": "p2pws-key-backup",
+      "passphrase": "correct horse battery staple",
+      "payload": "MC4CAQAwBQYDK2VwBCIEIJ7YHn6JUKcLvDrtErIoesycvdPohz6xloJll3PE9r02",
+      "iterations": 600000,
+      "header": {
+        "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+        "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+        "label": "laptop",
+        "createdAt": 1760000000000
+      }
+    },
+    {
+      "file": "p2pws-key-backup-1k.json",
+      "format": "p2pws",
+      "type": "p2pws-key-backup",
+      "passphrase": "correct horse battery staple",
+      "payload": "MC4CAQAwBQYDK2VwBCIEIJ7YHn6JUKcLvDrtErIoesycvdPohz6xloJll3PE9r02",
+      "iterations": 1000,
+      "header": {
+        "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+        "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+        "label": "laptop",
+        "createdAt": 1760000000000
+      }
+    },
+    {
+      "file": "p2pws-key-backup-nfkc-1k.json",
+      "format": "p2pws",
+      "type": "p2pws-key-backup",
+      "passphrase": "ｐａｓｓｗｏｒｄ１２３ ✓",
+      "payload": "MC4CAQAwBQYDK2VwBCIEIJ7YHn6JUKcLvDrtErIoesycvdPohz6xloJll3PE9r02",
+      "iterations": 1000,
+      "header": {
+        "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+        "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+        "label": "laptop",
+        "createdAt": 1760000000000
+      }
+    },
+    {
+      "file": "p2pws-key-backup-noaccount-1k.json",
+      "format": "p2pws",
+      "type": "p2pws-key-backup",
+      "passphrase": "no account here",
+      "payload": "MC4CAQAwBQYDK2VwBCIEIJ7YHn6JUKcLvDrtErIoesycvdPohz6xloJll3PE9r02",
+      "iterations": 1000,
+      "header": {
+        "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+        "account": null,
+        "label": "",
+        "createdAt": 1760000000000
+      }
+    },
+    {
+      "file": "p2pws-account-recovery-1k.json",
+      "format": "p2pws",
+      "type": "p2pws-account-recovery",
+      "passphrase": "a bundle passphrase",
+      "payload": "eyJ2IjoxLCJrZXlzIjpbeyJraWQiOiJiV2pGVERQZFVOMFBLOTNlSWtILTRTVDR1Z01rSldwazJFYml2NUJDSjRRIiwicGtjczgiOiJNQzRDQVFBd0JRWURLMlZ3QkNJRUlKN1lIbjZKVUtjTHZEcnRFcklvZXN5Y3ZkUG9oejZ4bG9KbGwzUEU5cjAyIn1dLCJub3RlIjoiZml4dHVyZSDinJMifQ",
+      "iterations": 1000,
+      "header": {
+        "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+        "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+        "label": "bundle",
+        "createdAt": 1760000000000
+      }
+    },
+    {
+      "file": "p2pws-account-recovery-600k.json",
+      "format": "p2pws",
+      "type": "p2pws-account-recovery",
+      "passphrase": "a bundle passphrase",
+      "payload": "eyJ2IjoxLCJrZXlzIjpbeyJraWQiOiJiV2pGVERQZFVOMFBLOTNlSWtILTRTVDR1Z01rSldwazJFYml2NUJDSjRRIiwicGtjczgiOiJNQzRDQVFBd0JRWURLMlZ3QkNJRUlKN1lIbjZKVUtjTHZEcnRFcklvZXN5Y3ZkUG9oejZ4bG9KbGwzUEU5cjAyIn1dLCJub3RlIjoiZml4dHVyZSDinJMifQ",
+      "iterations": 600000,
+      "header": {
+        "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+        "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+        "label": "bundle",
+        "createdAt": 1760000000000
+      }
+    },
+    {
+      "file": "p2pws-identity-bundle-1k.json",
+      "format": "p2pws",
+      "type": "p2pws-identity-bundle",
+      "passphrase": "a bundle passphrase",
+      "payload": "eyJ2IjoxLCJrZXlzIjpbeyJraWQiOiJiV2pGVERQZFVOMFBLOTNlSWtILTRTVDR1Z01rSldwazJFYml2NUJDSjRRIiwicGtjczgiOiJNQzRDQVFBd0JRWURLMlZ3QkNJRUlKN1lIbjZKVUtjTHZEcnRFcklvZXN5Y3ZkUG9oejZ4bG9KbGwzUEU5cjAyIn1dLCJub3RlIjoiZml4dHVyZSDinJMifQ",
+      "iterations": 1000,
+      "header": {
+        "kid": "bWjFTDPdUN0PK93eIkH-4ST4ugMkJWpk2Ebiv5BCJ4Q",
+        "account": "acct_BwcHBwcHBwcHBwcHBwcHBw",
+        "label": "bundle",
+        "createdAt": 1760000000000
+      }
+    },
+    {
+      "file": "browsermesh-vault-310k.json",
+      "format": "browsermesh-vault",
+      "type": "browsermesh-vault",
+      "passphrase": "vault passphrase",
+      "payload": "eyJrZXlfb3BzIjpbInNpZ24iXSwiZXh0Ijp0cnVlLCJhbGciOiJFZDI1NTE5IiwiY3J2IjoiRWQyNTUxOSIsImQiOiJNM05zSHFYclFlS1NQaXF3a1BheWN6UFg5TzRZOGxoSUtTNUpScHo5aWw4IiwieCI6ImJpYUotMFVJZklHY25aYWVJSnotdXp6aXpmbFRzaG03NWYwVHdCZS1sdmsiLCJrdHkiOiJPS1AifQ",
+      "iterations": 310000,
+      "legacy": false
+    },
+    {
+      "file": "browsermesh-vault-unicode-310k.json",
+      "format": "browsermesh-vault",
+      "type": "browsermesh-vault",
+      "passphrase": "ｐａｓｓ ünï ✓",
+      "payload": "eyJrZXlfb3BzIjpbInNpZ24iXSwiZXh0Ijp0cnVlLCJhbGciOiJFZDI1NTE5IiwiY3J2IjoiRWQyNTUxOSIsImQiOiJNM05zSHFYclFlS1NQaXF3a1BheWN6UFg5TzRZOGxoSUtTNUpScHo5aWw4IiwieCI6ImJpYUotMFVJZklHY25aYWVJSnotdXp6aXpmbFRzaG03NWYwVHdCZS1sdmsiLCJrdHkiOiJPS1AifQ",
+      "iterations": 310000,
+      "legacy": false
+    },
+    {
+      "file": "browsermesh-vault-legacy-310k.json",
+      "format": "browsermesh-vault",
+      "type": "browsermesh-vault",
+      "passphrase": "vault passphrase",
+      "payload": "eyJrZXlfb3BzIjpbInNpZ24iXSwiZXh0Ijp0cnVlLCJhbGciOiJFZDI1NTE5IiwiY3J2IjoiRWQyNTUxOSIsImQiOiJNM05zSHFYclFlS1NQaXF3a1BheWN6UFg5TzRZOGxoSUtTNUpScHo5aWw4IiwieCI6ImJpYUotMFVJZklHY25aYWVJSnotdXp6aXpmbFRzaG03NWYwVHdCZS1sdmsiLCJrdHkiOiJPS1AifQ",
+      "iterations": 310000,
+      "legacy": true
+    }
+  ],
+  "logins": [
+    {
+      "password": "a long login password",
+      "salt": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+      "iterations": 310000,
+      "authKey": "i-dPeui7ynYTaZ7YV4tdsOwI0sS07ogNOWr8A7l_QPE",
+      "vaultKey": "hyw15GtzEMfs677Z4UMCJEQV0AFXDcliWAe9pDUO-34",
+      "deriveVaultKey": "hyw15GtzEMfs677Z4UMCJEQV0AFXDcliWAe9pDUO-34"
+    },
+    {
+      "password": "pässwörd with ünicode ✓ 123",
+      "salt": "paWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaU",
+      "iterations": 310000,
+      "authKey": "R6bah4C2nHotVdTU2qgUeH0TiSvjK44y6yxgB1xpLtk",
+      "vaultKey": "I303YgJkIG_cLgxBt8hh6b4r020IopIRgAN92InU6E8",
+      "deriveVaultKey": "I303YgJkIG_cLgxBt8hh6b4r020IopIRgAN92InU6E8"
+    }
+  ]
+}
