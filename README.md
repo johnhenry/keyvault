@@ -2,7 +2,7 @@
 
 Turn a human secret (a password, a passphrase, a passkey) into keys, and seal small secrets such as private keys with them.
 
-- **Zero runtime dependencies.** WebCrypto only. ESM. Browsers, Node >= 20 and Deno.
+- **Zero runtime dependencies.** WebCrypto only. ESM. Browsers, Node >= 22 and Deno.
 - **Self-describing.** The KDF name and parameters are written into every record and authenticated, so you can raise them later without orphaning old records (`needsUpgrade()`).
 - **Safe on hostile input.** Iteration, memory and size caps, unknown KDFs rejected, empty / `undefined` / non-string secrets refused.
 - **Compatible.** Reads (and writes) the sealed files p2pws's `backup.mjs` produces, and reads the records browsermesh's `VaultIdentityStorage` stores.
